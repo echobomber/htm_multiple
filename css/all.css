@@ -85,6 +85,60 @@ a {
   padding: 0 4%;
 }
 
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
 .section-gutter {
   margin-top: 50px;
   margin-bottom: 90px;
@@ -104,6 +158,43 @@ a {
 
 .gray {
   color: #9b9b9b;
+}
+
+.btn-normal {
+  display: inline-block;
+  background-color: #00cc99;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.btn-normal:hover {
+  background-color: #2e8b57;
+}
+
+.btn-outline {
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px solid #00cc99;
+  color: #00cc99;
+}
+
+.btn-outline:hover {
+  background-color: #00cc99;
+  color: #ffffff;
+}
+
+.banner-btn {
+  font-size: 1.5rem;
+  padding: 20px 40px;
+}
+
+.banner-btn i {
+  margin-left: 10px;
+}
+
+.classCard-btn {
+  padding: 10px 16px;
+  font-weight: bold;
 }
 
 .banner {
@@ -139,18 +230,6 @@ a {
   background: rgba(129, 129, 129, 0.3);
 }
 
-.topNav .logo {
-  display: block;
-  width: 182px;
-  height: 74px;
-  text-indent: 101%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url("../img/logo.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .topNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,6 +251,18 @@ a {
   border-bottom: 10px solid #00cc99;
 }
 
+.logo {
+  display: block;
+  width: 182px;
+  height: 74px;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .head-content {
   color: #ffffff;
 }
@@ -184,24 +275,6 @@ a {
 
 .head-content h2 span {
   color: #00cc99;
-}
-
-.head-content .link-btn {
-  display: inline-block;
-  background-color: #00cc99;
-  color: #ffffff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 20px 40px;
-}
-
-.head-content .link-btn:hover {
-  background-color: #2e8b57;
-}
-
-.head-content .link-btn i {
-  margin-left: 10px;
 }
 
 .section-title h3 {
@@ -218,6 +291,66 @@ a {
   font-size: 1.2rem;
 }
 
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ebebeb;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 130px 40px;
+}
+
+.footer-content h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer-content h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-content h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.footer-link {
+  background-color: #323228;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-link a {
+  display: block;
+  padding: 10px;
+}
+
 .classCard nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,19 +364,6 @@ a {
   margin-bottom: 25px;
 }
 
-.classCard nav a {
-  padding: 10px 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 2px solid #00cc99;
-  color: #00cc99;
-}
-
-.classCard nav a:hover {
-  background-color: #00cc99;
-  color: #ffffff;
-}
-
 .classCard .cardBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,6 +371,15 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .classCard .cardBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .classCard .cardBox .card {
@@ -264,6 +393,12 @@ a {
           transform: translate(-3px, -3px);
 }
 
+@media (max-width: 768px) {
+  .classCard .cardBox .card {
+    width: 100%;
+  }
+}
+
 .classCard .cardBox .card a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,7 +410,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 20px;
+  padding: 20px 20px;
   color: #323228;
 }
 
@@ -289,8 +424,77 @@ a {
   line-height: 1.4rem;
 }
 
+.compare-table .section-title {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .compare-table .table-wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
 .compare-table table {
+  font-weight: bold;
+  border-collapse: collapse;
+  text-align: center;
   width: 100%;
-  overflow-x: scroll;
+}
+
+@media (max-width: 768px) {
+  .compare-table table {
+    width: 1024px;
+  }
+}
+
+.compare-table table td, .compare-table table th {
+  border: 1px solid #dddddd;
+  border-right: 0;
+  border-left: 0;
+  padding: 18px;
+}
+
+.compare-table table th {
+  background: #ebebeb;
+}
+
+.index-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.index-form input {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-indent: 15px;
+  line-height: 3.5rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .index-form input {
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+}
+
+.index-form .footer-btn {
+  width: 30%;
+  text-indent: 0;
 }
 /*# sourceMappingURL=all.css.map */

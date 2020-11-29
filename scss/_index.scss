@@ -4,32 +4,27 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 25px;
-        a{
-            padding: 10px 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            border: 2px solid $primary-color;
-            color: $primary-color;
-            &:hover{
-                background-color: $primary-color;
-                color: #ffffff;
-            }
-        }
     }
     .cardBox{
         display: flex;
         justify-content: space-between;
+        @include ipad(){
+            flex-direction: column;
+        }
         .card{
             width: 31.3333%;
             box-shadow: 0px 2px 5px silver;
             &:hover{
                 transform: translate(-3px, -3px);
             }
+            @include ipad(){
+                width: 100%;
+            }
             a{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 30px 20px;
+                padding: 20px 20px;
                 color: $dark;
                 h4{
                     font-size: 1.5rem;
@@ -45,8 +40,56 @@
     }
 }
 .compare-table{
+    .section-title {
+        margin-bottom: 25px;
+    }
+    .table-wrap{
+       @include ipad(){
+            overflow-x: auto;
+            overflow-y: hidden;
+       }
+    }
     table{
+        font-weight: bold;
+        border-collapse: collapse;
+        text-align: center;
         width: 100%;
-        overflow-x: scroll;
+        @include ipad(){
+            width: 1024px;
+        }
+        td,th{
+            border: 1px solid #dddddd;
+            border-right: 0;
+            border-left: 0;
+            padding: 18px;
+        }
+        th{
+            background: $light;
+        }
+    }
+}
+//頁尾
+.index-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    input{
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-indent: 15px;
+        line-height: 3.5rem;
+        margin-bottom: 20px;
+        @include ipad(){
+            font-size: 1rem;
+            line-height: 3rem;
+        }
+    }
+    .footer-btn{
+        width: 30%;
+        text-indent: 0;
     }
 }
