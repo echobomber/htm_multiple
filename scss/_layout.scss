@@ -37,8 +37,12 @@ a{
   }
 }
 .section-gutter{
-    margin-top: 50px;
-    margin-bottom: 90px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    @include ipad(){
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }
 .primary-color{
     color: $primary-color;
@@ -74,13 +78,13 @@ a{
 .banner-btn{
     font-size: 1.5rem;
     padding: 20px 40px;
+    @include ipad(){
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
     i{
         margin-left: 10px;
     }
-}
-.classCard-btn{
-    padding: 10px 16px;
-    font-weight: bold;
 }
 .banner{
     position: relative;
@@ -102,12 +106,29 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     background: rgba(129, 129, 129, 0.3);
     ul{
         display: flex;
+        // transition: all .5s;
+        @include ipad(){
+            flex-direction: column;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            &.openMenu{
+                height: 222px;
+            }
+        }
+        li{
+            text-align: center;
+            @include ipad(){
+                width: 100%;
+            }
+        }
         a{
             display: block;
-            padding: 24px 40px;
+            padding: 24px 40px 14px 40px;
             text-decoration: none;
             color: #ffffff;
             border-bottom: 10px solid transparent;
@@ -119,16 +140,30 @@ a{
         }
     }
 }
+.menu-toggle{
+    display: none;
+    @include ipad(){
+        display: block;
+        padding: 20px;
+        color: #ffffff;
+        font-size: 1.3rem;
+    }
+}
 .logo{
     display: block;
     width: 182px;
-    height: 74px;
+    height: 60px;
     text-indent: 101%;
     white-space: nowrap;
     overflow: hidden;
     background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
+    @include rwd(375px){
+        width: 151px;
+        height: 50px;
+    }
 }
 .head-content{
     color: #ffffff;
@@ -136,6 +171,14 @@ a{
         font-size: 3rem;
         line-height: 4rem;
         margin-bottom: 35px;
+        @include ipad(){
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        @include rwd(375px){
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+        }
         span{
             color: $primary-color;
         }
@@ -146,6 +189,9 @@ a{
         color: $primary-color;
         font-size: 2rem;
         font-weight: bold;
+        @include ipad(){
+            text-align: center;
+        }
         span{
             display: inline-block;
             margin-left: 10px;
@@ -181,6 +227,10 @@ a{
     background-color: $dark;
     display: flex;
     justify-content: space-between;
+    @include ipad(){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .social-link{
     display: flex;

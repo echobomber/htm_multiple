@@ -140,8 +140,15 @@ a {
 }
 
 .section-gutter {
-  margin-top: 50px;
-  margin-bottom: 90px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+  .section-gutter {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .primary-color {
@@ -188,13 +195,15 @@ a {
   padding: 20px 40px;
 }
 
-.banner-btn i {
-  margin-left: 10px;
+@media (max-width: 768px) {
+  .banner-btn {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+  }
 }
 
-.classCard-btn {
-  padding: 10px 16px;
-  font-weight: bold;
+.banner-btn i {
+  margin-left: 10px;
 }
 
 .banner {
@@ -227,6 +236,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: rgba(129, 129, 129, 0.3);
 }
 
@@ -236,9 +247,34 @@ a {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .topNav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  .topNav ul.openMenu {
+    height: 222px;
+  }
+}
+
+.topNav ul li {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .topNav ul li {
+    width: 100%;
+  }
+}
+
 .topNav ul a {
   display: block;
-  padding: 24px 40px;
+  padding: 24px 40px 14px 40px;
   text-decoration: none;
   color: #ffffff;
   border-bottom: 10px solid transparent;
@@ -251,16 +287,37 @@ a {
   border-bottom: 10px solid #00cc99;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 1.3rem;
+  }
+}
+
 .logo {
   display: block;
   width: 182px;
-  height: 74px;
+  height: 60px;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
   background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
+}
+
+@media (max-width: 375px) {
+  .logo {
+    width: 151px;
+    height: 50px;
+  }
 }
 
 .head-content {
@@ -273,6 +330,20 @@ a {
   margin-bottom: 35px;
 }
 
+@media (max-width: 768px) {
+  .head-content h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .head-content h2 {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+}
+
 .head-content h2 span {
   color: #00cc99;
 }
@@ -281,6 +352,12 @@ a {
   color: #00cc99;
   font-size: 2rem;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .section-title h3 {
+    text-align: center;
+  }
 }
 
 .section-title h3 span {
@@ -337,6 +414,18 @@ a {
           justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .footer-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .social-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,6 +451,15 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .classCard nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .classCard .cardBox {
@@ -396,6 +494,7 @@ a {
 @media (max-width: 768px) {
   .classCard .cardBox .card {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -424,6 +523,12 @@ a {
   line-height: 1.4rem;
 }
 
+.classCard-btn {
+  padding: 10px 16px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
 .compare-table .section-title {
   margin-bottom: 25px;
 }
@@ -444,7 +549,7 @@ a {
 
 @media (max-width: 768px) {
   .compare-table table {
-    width: 1024px;
+    width: 700px;
   }
 }
 
@@ -473,6 +578,14 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .index-form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .index-form input {
